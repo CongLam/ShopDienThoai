@@ -23,7 +23,7 @@
                             Hết hàng
                         @endif
                     </p>
-                    <p class="add-cart text-center"><a href="#">Đặt hàng online</a></p>
+                    <p class="add-cart text-center"><a href="{{ asset('cart/add/'.$detailProduct->product_id) }}">Đặt hàng online</a></p>
                 </div>
             </div>
         </div>

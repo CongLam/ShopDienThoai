@@ -1,5 +1,5 @@
 @extends('frontend/master/master')
-@section('title', 'Chi tiết sản phẩm')
+@section('title', 'Xác nhận đặt hàng')
 @section('main')
 	<link rel="stylesheet" href="css/email.css">
     <div id="wrap-inner">
@@ -7,45 +7,35 @@
             <h3>Thông tin khách hàng</h3>
             <p>
                 <span class="info">Khách hàng: </span>
-                Vietpro
+                {{ $info['name'] }}
             </p>
             <p>
                 <span class="info">Email: </span>
-                vietpro@gmail.com
+                {{ $info['email']}}
             </p>
             <p>
                 <span class="info">Điện thoại: </span>
-                01234567988
+                {{ $info['phone']}}
             </p>
             <p>
                 <span class="info">Địa chỉ: </span>
-                Hà Nội
+                {{ $info['add'] }}
             </p>
         </div>
         <div id="hoa-don">
             <h3>Hóa đơn mua hàng</h3>
             <table class="table-bordered table-responsive">
-                <tr class="bold">
-                    <td width="30%">Tên sản phẩm</td>
-                    <td width="25%">Giá</td>
-                    <td width="20%">Số lượng</td>
-                    <td width="15%">Thành tiền</td>
-                </tr>
-                <tr>
-                    <td>iPhone 5s 16GB gold</td>
-                    <td class="price">4.000.000 VNĐ</td>
-                    <td>1</td>
-                    <td class="price">4.000.000 VNĐ</td>
-                </tr>
-                <tr>
-                    <td>iPhone 6Plus 64GB grey</td>
-                    <td class="price">8.500.000 VNĐ</td>
-                    <td>2</td>
-                    <td class="price">17.000.000VNĐ</td>
-                </tr>
+                @foreach ($cart as $item)
+                    <tr class="bold">
+                        <td width="30%">{{ $item->name }}</td>
+                        <td width="25%">{{ number_format($item->price) }}VNĐ</td>
+                        <td width="20%">{{ $item->qty }}</td>
+                        <td width="15%">{{ number_format($item->price*$item->qty,0,',','.') }}VNĐ</td>
+                    </tr>
+                @endforeach
                 <tr>
                     <td colspan="3">Tổng tiền:</td>
-                    <td class="total-price">21.000.000VNĐ</td>
+                    <td class="total-price">{{ $totalPrice }}VNĐ</td>
                 </tr>
             </table>
         </div>
