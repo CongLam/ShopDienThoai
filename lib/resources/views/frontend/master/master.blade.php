@@ -30,13 +30,22 @@
 				menu.removeAttr('style');
 			}
 		});
-	</script>
+    </script>
+    <style>
+        #slider img{
+            width:100% !important;
+        }
+
+        #banner-l img{
+            width: 100% !important;
+        }
+    </style>
 </head>
 <body>
 	@include('frontend\master\header')
 
     <section id="body">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div id="sidebar" class="col-md-3">
 					<nav id="menu">
@@ -59,20 +68,14 @@
 						<div class="banner-l-item">
 							<a href="#"><img src="img/home/banner-l-3.png" alt="" class="img-thumbnail"></a>
 						</div>
-						<div class="banner-l-item">
-							<a href="#"><img src="img/home/banner-l-4.png" alt="" class="img-thumbnail"></a>
-						</div>
-						<div class="banner-l-item">
-							<a href="#"><img src="img/home/banner-l-5.png" alt="" class="img-thumbnail"></a>
-						</div>
-						<div class="banner-l-item">
-							<a href="#"><img src="img/home/banner-l-6.png" alt="" class="img-thumbnail"></a>
-						</div>
+						
 						<div class="banner-l-item">
 							<a href="#"><img src="img/home/banner-l-7.png" alt="" class="img-thumbnail"></a>
 						</div>
 					</div>
-				</div>
+
+
+                </div>
 
 				<div id="main" class="col-md-9">
 					<!-- main -->
@@ -124,7 +127,7 @@
                     @yield('main')
 
                     <!-- end main -->
-				</div>
+                </div>
 			</div>
 		</div>
 	</section>

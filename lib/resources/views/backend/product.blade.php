@@ -44,17 +44,22 @@
                                                 </td>
                                             </tr>
                                         @endforeach
-
-
 									</tbody>
 								</table>
 							</div>
 						</div>
 						<div class="clearfix"></div>
 					</div>
-				</div>
+                </div>
+                <div id="pagination">
+                    {{ $productList->links() }}
+                </div>
+
 			</div>
-		</div><!--/.row-->
+        </div><!--/.row-->
+
+
+
     </div>	<!--/.main-->
 @endsection
 

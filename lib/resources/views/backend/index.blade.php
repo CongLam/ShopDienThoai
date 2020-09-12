@@ -16,7 +16,7 @@
                             <svg class="glyph stroked bag"><use xlink:href="#stroked-bag"></use></svg>
                         </div>
                         <div class="col-sm-9 col-lg-7 widget-right">
-                            <div class="large">120</div>
+                            <div class="large">{{ $numberProd }}</div>
                             <div class="text-muted">Sản phẩm</div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                             <svg class="glyph stroked empty-message"><use xlink:href="#stroked-empty-message"></use></svg>
                         </div>
                         <div class="col-sm-9 col-lg-7 widget-right">
-                            <div class="large">52</div>
+                            <div class="large">{{ $numberComm }}</div>
                             <div class="text-muted">Bình luận</div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                             <svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
                         </div>
                         <div class="col-sm-9 col-lg-7 widget-right">
-                            <div class="large">24</div>
+                            <div class="large">{{ $numberAdmin }}</div>
                             <div class="text-muted">Người dùng</div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                             <svg class="glyph stroked app-window-with-content"><use xlink:href="#stroked-app-window-with-content"></use></svg>
                         </div>
                         <div class="col-sm-9 col-lg-7 widget-right">
-                            <div class="large">25.2k</div>
+                            <div class="large">{{ $numberCate }}</div>
                             <div class="text-muted">Danh mục</div>
                         </div>
                     </div>

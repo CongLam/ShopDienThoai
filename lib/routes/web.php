@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//----------------FRONTEND----------------------------------
 Route::get('/', 'FrontendController@getHome');
 
 Route::get('detail/{id}/{slug}.html', 'FrontendController@getDetail');
@@ -31,6 +31,8 @@ Route::group(['prefix' => 'cart'], function () {
 Route::get('complete','CartController@getComplete' );
 
 
+
+//----------------BACKEND----------------------------------
 Route::group(['namespace' => 'Admin'], function () {
     Route::group(['prefix' => 'login','middleware'=>'CheckLogedIn'], function () {
         Route::get('/', 'LoginController@getLogin');

@@ -4,7 +4,7 @@
         <div class="row">
             <div id="logo" class="col-md-3 col-sm-12 col-xs-12">
                 <h1>
-                    <a href="{{ asset('/') }}"><img src="img/home/logo.png"></a>
+                    <a href="{{ asset('/') }}"><img src="img/home/conglam-logo.png" width="98%"></a>
                     <nav><a id="pull" class="btn btn-danger" href="#">
                         <i class="fa fa-bars"></i>
                     </a></nav>

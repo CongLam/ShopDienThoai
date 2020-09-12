@@ -12,8 +12,8 @@ use DB;
 class ProductController extends Controller
 {
     public function getProduct(){
-        $data['productList'] = DB::table('tbl_products')->join('tbl_categories','tbl_products.product_cate','=','tbl_categories.cate_id')->orderBy('product_id', 'desc')->get();
-       // $data['productlist'] = DB::table('vp_product')->join('vp_categories','vp_product.product_cate','=','vp_categories.cate_id')->orderBy('product_id', 'desc')->get();
+        $data['productList'] = DB::table('tbl_products')->join('tbl_categories','tbl_products.product_cate','=','tbl_categories.cate_id')->orderBy('product_id', 'desc')->paginate(5);
+        //$data['paginateProduct'] = Product::paginate(5);
 
         return view('backend.product', $data);
     }
